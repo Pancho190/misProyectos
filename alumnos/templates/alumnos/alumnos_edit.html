@@ -17,10 +17,10 @@
         <form action="{% url 'alumnosUpdate' %}" method="post">
             {% csrf_token %}
 
-            <pre>Rut:                  <input type="text" name="rut"></pre>
-            <pre>Nombre:               <input type="text" name="nombre"></pre>
-            <pre>Apellido P.           <input type="text" name="paterno"></pre>
-            <pre>Apellido M.           <input type="text" name="materno"></pre> 
+            <pre>Rut:                  <input type="text" name="rut"         value="{{alumno.rut}}"></pre>
+            <pre>Nombre:               <input type="text" name="nombre"      value="{{alumno.nombre}}"></pre>
+            <pre>Apellido P.           <input type="text" name="paterno"     value="{{alumno.apellido_paterno}}"></pre>
+            <pre>Apellido M.           <input type="text" name="materno"     value="{{alumno.apellido_materno}}"></pre> 
             <pre>Fecha Nac.            <input type="date" name="fechaNac" value="{{alumno.fecha_nacimiento|date:'Y-m-d'}}"></pre> 
             <pre>Género.               <select name="genero">
             

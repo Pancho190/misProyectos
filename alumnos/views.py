@@ -116,8 +116,8 @@ def alumnosUpdate(request):
         alumno.save()
 
         generos=Genero.objects.all()
-        context={'mensaje':"Ok, datos actualizados",'genero':generos,'alumno':alumno}
-        return render(request,'alumno/alumnos_edit.html', context)
+        context={'mensaje':"Ok, datos actualizados...",'genero':generos,'alumno':alumno}
+        return render(request,'alumnos/alumnos_edit.html', context)
     else:
         alumnos=Alumno.objects.all()
         context={'alumnos':alumnos}
