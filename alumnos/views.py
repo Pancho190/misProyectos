@@ -199,3 +199,9 @@ def generos_edit(request, pk):
         mensaje="Error, id no existe"
         context={'mensaje':mensaje,'generos':generos}
         return render(request, 'alumnos/generos_list.html', context)
+    
+def menu(request):
+    request.session["usuario"]="fsilva"
+    usuario=request.session["usuario"]
+    context = {'usuario':usuario}
+    return render(request, 'administrador/menu.html', context)
